@@ -1,0 +1,20 @@
+0.  GIF: 256 colores
+BMP: 
+1.  TODO
+2.  TODO
+3.  TODO
+4.  TODO
+5.  Destruyendo de manera física el disco
+6.  Es una librería que establece maximo y minimo y es para código portatil
+7.  TODO
+8.  TODO
+9.  TODO
+10. TODO
+11. TODO
+12. TODO
+13. TODO
+14. TODO
+15. TODO
+16. TODO
+17. TODO
+18. TODO
