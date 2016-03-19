@@ -4,8 +4,10 @@
     require("../includes/config.php"); 
 
     $rows = CS50::query("SELECT * FROM Portfolio WHERE user_id = ?", $_SESSION["id"]);	
-    $cash = cs50::query("SELECT cash FROM users WHERE id = ?", $_SESSION["id"]);
+    $cash = CS50::query("SELECT cash FROM users WHERE id = ?", $_SESSION["id"]);
+    
     $cash = $cash[0]["cash"];
+    
     //Body
     $positions = [];
     foreach ($rows as $row)

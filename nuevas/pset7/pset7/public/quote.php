@@ -18,7 +18,6 @@
         
         $stock = lookup($_POST["symbol"]);
         
-        
         if ($stock == 0)
         {
             apologize("Invalid symbol");

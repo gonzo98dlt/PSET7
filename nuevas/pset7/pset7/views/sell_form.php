@@ -13,11 +13,12 @@
                 </select>
             </div>
             <div class="control-group">
-                <input style ="background-color: #E8E8E8;" class="input-big" name="shares" placeholder="Shares" type="text"/>
+                <input style ="background-color: #E8E8E8;" class="input-big" name="new_shares" placeholder="Shares" type="text"/>
             </div>
             <div class="form-group">
                 <button style ="color: white; font-family: Helvetica;" focus class="btn btn-warning" type="submit"> Sell </button>
             </div>
+            <a href="/"><img width="250" height="150" alt="Time to sell" src="http://milanvintagebike.co.uk/images/sold.png"/></a>
         </fieldset>
     </form>
 </body>

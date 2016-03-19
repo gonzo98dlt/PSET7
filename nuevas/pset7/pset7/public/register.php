@@ -15,8 +15,15 @@
     {
         // TODO
         // validate submission
-        
-        if (($_POST["username"]) == NULL)
+        if ($_POST["firstname"] == NULL)
+        {
+            apologize("Tell us your first name");
+        }
+        else if ($_POST["lastname"] == NULL)
+        {
+            apologize("Tell us your last name");
+        }
+        else if (($_POST["username"]) == NULL)
         {
             apologize("You must provide your username.");
         }
@@ -31,18 +38,16 @@
             apologize("Passwords do not match!");
         }
         
-        $result = CS50::query("INSERT IGNORE INTO users (username, hash, cash) VALUES(?, ?, 10000.0000)", $_POST["username"], password_hash($_POST["password"], PASSWORD_DEFAULT));
-        if ($result == false)
+        else if (CS50::query("INSERT IGNORE INTO users (username, hash, cash, firstname, lastname) VALUES(?, ?, 10000.0000, ?, ?)", $_POST["username"], password_hash($_POST["password"], PASSWORD_DEFAULT), $_POST["firstname"], $_POST["lastname"]) == 0)
         {
-            // error
-            apologize("This username alreadty exists.");
+            apologize("Username already exists");
+        }       
+        else
+        {
+            $rows = CS50::query("SELECT LAST_INSERT_ID() AS id");
+            $id = $rows[0]["id"];
+            $_SESSION["id"] = $id;
+            redirect("index.php");
         }
-        
-        // Logging in
-        $rows = CS50::query("SELECT LAST_INSERT_ID() AS id");
-        $id = $rows[0]["id"];
-        $_SESSION["id"] = $id;
-        
-        redirect("/");
     }
 ?>

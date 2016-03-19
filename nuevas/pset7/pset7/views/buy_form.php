@@ -10,6 +10,7 @@
             <div class="control-group">
                 <button type="submit" focus class="btn btn-danger" >Buy</button>
             </div>
+            <a href="/"><img width="280" height="250" alt="Time to sell" src="http://stretchninjawarrior.com/openties/images/buynow.png"/></a>
         </fieldset>
     </form>
 </body>
